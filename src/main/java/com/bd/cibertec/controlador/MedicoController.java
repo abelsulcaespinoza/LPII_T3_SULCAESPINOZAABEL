@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -61,7 +60,7 @@ public class MedicoController {
 	@GetMapping ("eliminarmedico/{id}")
 	public String eliminar(@PathVariable("id") Integer idmedico, Model modelo) {
 	TblMedico tblmed = new TblMedico();
-	tblmed.setIdmedico(idmedico);
+	tblmed.setIdmedicot3(idmedico);
 	imedicoservicio.EliminarMedico(tblmed);
 	List<TblMedico> listado = imedicoservicio.ListadoMedico();
 	modelo.addAttribute("listado", listado);

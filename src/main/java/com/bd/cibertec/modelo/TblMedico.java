@@ -5,99 +5,116 @@ import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
+@Entity
+@Table(name="tbl_medicot3")
 public class TblMedico {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idmedico;
-	private String nombre;
-	private String apellido;
-	private String email;
-	private String dni;
-	private String estadocivil;
+	private int idmedicot3;
+	private String nombret3;
+	private String apellidot3;
+	private String emailt3;
+	private String dnit3;
+	private String estadocivilt3;
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(iso=ISO.DATE)
-	private Date fechanacim;
+	private Date fechanacimt3;
 	
-	// Constructores
-	public TblMedico(int idmedico, String nombre, String apellido, String email, String dni, String estadocivil,
-			Date fechanacim) {
-		//super();
-		this.idmedico = idmedico;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.email = email;
-		this.dni = dni;
-		this.estadocivil = estadocivil;
-		this.fechanacim = fechanacim;
+	
+	public TblMedico(int idmedicot3, String nombret3, String apellidot3, String emailt3, String dnit3,
+			String estadocivilt3, Date fechanacimt3) {
+		this.idmedicot3 = idmedicot3;
+		this.nombret3 = nombret3;
+		this.apellidot3 = apellidot3;
+		this.emailt3 = emailt3;
+		this.dnit3 = dnit3;
+		this.estadocivilt3 = estadocivilt3;
+		this.fechanacimt3 = fechanacimt3;
 	}
-	
+
+
 	public TblMedico() {
-		//super();
 	}
 
-	// Getters & Setters 
-	public int getIdmedico() {
-		return idmedico;
+
+	public int getIdmedicot3() {
+		return idmedicot3;
 	}
 
-	public void setIdmedico(int idmedico) {
-		this.idmedico = idmedico;
+
+	public void setIdmedicot3(int idmedicot3) {
+		this.idmedicot3 = idmedicot3;
 	}
 
-	public String getNombre() {
-		return nombre;
+
+	public String getNombret3() {
+		return nombret3;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+
+	public void setNombret3(String nombret3) {
+		this.nombret3 = nombret3;
 	}
 
-	public String getApellido() {
-		return apellido;
+
+	public String getApellidot3() {
+		return apellidot3;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+
+	public void setApellidot3(String apellidot3) {
+		this.apellidot3 = apellidot3;
 	}
 
-	public String getEmail() {
-		return email;
+
+	public String getEmailt3() {
+		return emailt3;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setEmailt3(String emailt3) {
+		this.emailt3 = emailt3;
 	}
 
-	public String getDni() {
-		return dni;
+
+	public String getDnit3() {
+		return dnit3;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+
+	public void setDnit3(String dnit3) {
+		this.dnit3 = dnit3;
 	}
 
-	public String getEstadocivil() {
-		return estadocivil;
+
+	public String getEstadocivilt3() {
+		return estadocivilt3;
 	}
 
-	public void setEstadocivil(String estadocivil) {
-		this.estadocivil = estadocivil;
+
+	public void setEstadocivilt3(String estadocivilt3) {
+		this.estadocivilt3 = estadocivilt3;
 	}
 
-	public Date getFechanacim() {
-		return fechanacim;
+
+	public Date getFechanacimt3() {
+		return fechanacimt3;
 	}
 
-	public void setFechanacim(Date fechanacim) {
-		this.fechanacim = fechanacim;
+
+	public void setFechanacimt3(Date fechanacimt3) {
+		this.fechanacimt3 = fechanacimt3;
 	}
 	
+
 	
 	
 

@@ -3,10 +3,12 @@ package com.bd.cibertec.Servicio;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bd.cibertec.modelo.TblMedico;
 import com.bd.cibertec.repositorio.IMedicoRepositorio;
 
+@Service
 public class MedicoServicioImp implements IMedicoServicio{
 	
 	// inyeccion de dependencias
@@ -21,7 +23,7 @@ public class MedicoServicioImp implements IMedicoServicio{
 
 	@Override
 	public void EliminarMedico(TblMedico tblMedico) {
-		imedicorepositorio.deleteById(tblMedico.getIdmedico());
+		imedicorepositorio.deleteById(tblMedico.getIdmedicot3());
 	}// Fin Metodo Eliminar
 
 	@Override
